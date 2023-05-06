@@ -27,10 +27,10 @@ public class ManagerFilms {
 
     public String[] findLast() {
         int resultLength;
-        if (films.length < 5) {
+        if (films.length < limit) {
             resultLength = films.length;
         } else {
-            resultLength = 5;
+            resultLength = limit;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
