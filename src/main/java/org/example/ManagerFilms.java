@@ -30,7 +30,7 @@ public class ManagerFilms {
         if (films.length < limit) {
             resultLength = films.length;
         } else {
-            resultLength = limit;
+            resultLength = 5;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {

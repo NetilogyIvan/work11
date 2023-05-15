@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestManagerFilms {
     @Test
-    public void maxAddFilms() {
+    public void randomAddFilms() {
         ManagerFilms managerFilms = new ManagerFilms();
         managerFilms.addFilm("Movie I");
         managerFilms.addFilm("Movie II");
@@ -63,11 +63,21 @@ public class TestManagerFilms {
     }
 
     @Test
-    public void nullAddFindLastFilms() {
+    public void nullFindLastFilms() {
         ManagerFilms managerFilms = new ManagerFilms();
 
         String[] actual = managerFilms.findLast();
         String[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void minFindLastFilms() {
+        ManagerFilms managerFilms = new ManagerFilms();
+        managerFilms.addFilm("Movie I");
+        String[] actual = managerFilms.findLast();
+        String[] expected = {"Movie I"};
+        Assertions.assertArrayEquals(expected, actual);
+
     }
 }
